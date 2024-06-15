@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UPI Payment</title>
+</head>
+<body>
+  <h2>UPI Payment</h2>
+  <form action="YOUR_UPI_PAYMENT_HANDLER_URL" method="post">
+    <label for="amount">Amount:</label>
+    <input type="text" id="amount" name="amount" required><br><br>
+    <label for="receiver">Receiver UPI ID:</label>
+    <input type="text" id="receiver" name="receiver" required><br><br>
+    <label for="description">Description:</label><br>
+    <textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>
+    <button type="submit">Pay Now</button>
+  </form>
+</body>
+</html>

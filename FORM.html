@@ -1,0 +1,52 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+      <link rel="stylesheet" href="c:\Users\BKD\Desktop\xyz.css">
+  </head>
+  <body>
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form id="myForm" action="#" method="POST">
+        <div class="form-group">
+          <input type="radio" name="option" value="option1"> Credit and Debit Card<br>
+          </div>
+          <div class="form-group">
+          <input type="radio" name="option" value="option2"> UPI payments<br>
+          </div>
+          <div class="form-group">
+          <input type="radio" name="option" value="option3"> Cash on delivery<br>
+          </div>
+          <button type="button" onclick="continueClicked()">Continue</button>
+      </form>
+      </div>
+  
+      <script>
+          function continueClicked() {
+              var form = document.getElementById("myForm");
+              var selectedOption = form.querySelector('input[name="option"]:checked');
+  
+              if (selectedOption) {
+                  var optionValue = selectedOption.value;
+                  // Redirect to the desired webpage based on the selected option
+                  switch (optionValue) {
+                      case "option1":
+                          window.location.href = "val.html";
+                          break;
+                      case "option2":
+                          window.location.href = "fridge.html";
+                          break;
+                      case "option3":
+                          window.location.href = "page3.html";
+                          break;
+                      default:
+                          // Redirect to a default page if none of the options match
+                          window.location.href = "default.html";
+                          break;
+                  }
+              } else {
+                  alert("Please select an option.");
+              }
+          }
+      </script>
+  </body>
+  </html>
